@@ -1,0 +1,17 @@
+Requisitos do App Maquininha Banco Imobiliário
+
+    O sistema precisa gerenciar o dinheiro do jogo.
+
+    Deve existir a entidade "Banco" (com dinheiro infinito para pagar os jogadores ou receber taxas).
+
+    Devem existir "Jogadores" (de 2 a 6 pessoas), cada um começando com um saldo inicial fixo (ex: $25.000).
+
+    Ações principais:
+
+        Jogador paga Jogador.
+
+        Jogador paga o Banco (comprar propriedades, impostos).
+
+        Banco paga Jogador (passar no início, prêmios).
+
+    O sistema deve manter um histórico simples das últimas transações para evitar brigas.
