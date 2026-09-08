@@ -19,21 +19,19 @@ class Jogador:
 
 
     def debitar(self, valor: float) -> None:
-        """
-        Deduz uma quantia específica de fundos do saldo atual do jogador.
-        
-        Parâmetros:
-            valor (float): O montante a ser retirado da conta do jogador.
-            
-        Regras de Negócio / Validações:
-            - O valor a ser debitado deve ser estritamente maior que zero.
-            - O jogador deve possuir saldo igual ou superior ao valor do débito solicitado.
-              Caso contrário, o sistema deve impedir a operação por Saldo Insuficiente.
-              
-        Efeitos:
-            - Altera o estado do objeto Jogador, reduzindo o seu saldo atual.
-        """
-        pass
+
+
+        if valor <= 0 :
+            raise ValueError("O valor precisa ser positivo") 
+
+
+        if valor > self.saldo :
+            raise ValueError(
+                "Saldo insuficiente."
+                f"O valor precisa ser menor que {self.saldo}"
+            )
+
+        self.saldo -= valor 
 
     def creditar(self, valor: float) -> None:
         """
