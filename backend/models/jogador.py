@@ -34,26 +34,15 @@ class Jogador:
         self.saldo -= valor 
 
     def creditar(self, valor: float) -> None:
-        """
-        Adiciona uma quantia específica de fundos ao saldo atual do jogador.
-        
-        Parâmetros:
-            valor (float): O montante a ser adicionado à conta do jogador.
-            
-        Regras de Negócio / Validações:
-            - O valor a ser creditado deve ser estritamente maior que zero.
-            
-        Efeitos:
-            - Altera o estado do objeto Jogador, incrementando o seu saldo atual.
-        """
-        pass
+
+        if valor < 0 :
+            raise ValueError("O valor precisa ser maior que 0")
+
+
+        self.saldo += valor
+
 
     def obter_saldo(self) -> float:
-        """
-        Consulta e retorna o saldo financeiro atual do jogador.
-        
-        Retorno:
-            float: O saldo atual do jogador.
-        """
-        pass
+    
+        return self.saldo
 
